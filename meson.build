@@ -32,7 +32,7 @@ shared_module (
     wingpanel_dep
   ],
   install: true,
-  install_dir : wingpanel_dep.get_pkgconfig_variable ('indicatorsdir')
+  install_dir : wingpanel_dep.get_variable ('indicatorsdir')
 )
 
 subdir ('po')

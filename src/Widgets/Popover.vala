@@ -32,26 +32,26 @@ namespace Places.Widgets {
             margin_top = 15;
             user_home = GLib.Environment.get_home_dir ();
 
-            user_listbox = new Gtk.ListBox();
+            user_listbox = new Gtk.ListBox ();
             user_listbox.set_selection_mode (Gtk.SelectionMode.NONE);
-            user_listbox.set_header_func(list_header_func);
+            user_listbox.set_header_func (list_header_func);
 
-            std_listbox = new Gtk.ListBox();
+            std_listbox = new Gtk.ListBox ();
             std_listbox.set_selection_mode (Gtk.SelectionMode.NONE);
-            std_listbox.set_header_func(list_header_func);
+            std_listbox.set_header_func (list_header_func);
 
-            vol_listbox = new Gtk.ListBox();
+            vol_listbox = new Gtk.ListBox ();
             vol_listbox.set_selection_mode (Gtk.SelectionMode.NONE);
-            vol_listbox.set_header_func(list_header_func);
+            vol_listbox.set_header_func (list_header_func);
 
             Gtk.Separator v_separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
             v_separator.margin_start = v_separator.margin_end = 3;
 
             add_std_places ();
             add_user_places ();
-            attach (std_listbox,  0, 0, 1, 1);
-            attach (vol_listbox,  0, 1, 1, 1);
-            attach (v_separator,  1, 0, 1, 2);
+            attach (std_listbox, 0, 0, 1, 1);
+            attach (vol_listbox, 0, 1, 1, 1);
+            attach (v_separator, 1, 0, 1, 2);
             attach (user_listbox, 2, 0, 1, 2);
             show_all ();
         }
@@ -114,9 +114,9 @@ namespace Places.Widgets {
         }
 
         private GLib.File? file_from_path (string path) {
-            string place = path.split(" ")[0];
-            string unescaped_path = GLib.Uri.unescape_string(place);
-            GLib.File file = GLib.File.new_for_uri(unescaped_path);
+            string place = path.split (" ")[0];
+            string unescaped_path = GLib.Uri.unescape_string (place);
+            GLib.File file = GLib.File.new_for_uri (unescaped_path);
             return file;
         }
 
@@ -125,10 +125,10 @@ namespace Places.Widgets {
                 return;
             }
 
-            close_poover ();
+            close_popover ();
 
-            GLib.AppLaunchContext launch_context = Gdk.Display.get_default().get_app_launch_context();
-            GLib.List<GLib.File> file_list = new GLib.List<GLib.File>();
+            GLib.AppLaunchContext launch_context = Gdk.Display.get_default ().get_app_launch_context ();
+            GLib.List<GLib.File> file_list = new GLib.List<GLib.File> ();
             file_list.append (file);
 
             try {
@@ -143,8 +143,8 @@ namespace Places.Widgets {
                 return "folder-remote";
             }
 
-            string unescaped_path = GLib.Uri.unescape_string(path);
-            string _path = unescaped_path.substring(7);
+            string unescaped_path = GLib.Uri.unescape_string (path);
+            string _path = unescaped_path.substring (7);
 
             if (_path == GLib.Environment.get_user_special_dir (GLib.UserDirectory.DESKTOP)) {
                 return "user-desktop";

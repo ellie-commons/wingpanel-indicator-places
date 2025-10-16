@@ -47,7 +47,7 @@ namespace Places {
         public override Gtk.Widget? get_widget () {
             if (main_widget == null) {
                 main_widget = new Widgets.Popover ();
-                main_widget.close_poover.connect (() => {
+                main_widget.close_popover.connect (() => {
                     close ();
                 });
             }
