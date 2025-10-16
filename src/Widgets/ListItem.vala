@@ -40,7 +40,7 @@ namespace Places.Widgets {
                 icon = new Gtk.Image.from_gicon (elem_icon, Gtk.IconSize.MENU);
             } else {
                 icon = new Gtk.Image ();
-                icon.set_from_icon_name (elem_img + "-symbolic", Gtk.IconSize.MENU);
+                icon.set_from_icon_name (elem_img, Gtk.IconSize.MENU);
             }
             icon.margin_start = icon.margin_end = 10;
 
