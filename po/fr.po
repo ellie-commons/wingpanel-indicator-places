@@ -1,82 +1,79 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xplaces-indicator package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-10-16 19:30+0200\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Project-Id-Version: xplaces-indicator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 19:30+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ../src\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: src/Widgets/BookmarksItem.vala:23
 msgid "Bookmarks"
-msgstr ""
+msgstr "Signets"
 
-#: src/Widgets/MountItem.vala:28 src/Widgets/VolumeItem.vala:30
+#: src/Widgets/MountItem.vala:28
+#: src/Widgets/VolumeItem.vala:30
 msgid "Devices"
-msgstr ""
+msgstr "Dispositifs"
 
 #. iter = new ListItem (_("Recent"), "document-open-recent");
 #. iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("recent:///"));});
 #. std_listbox.add (iter);
-#: src/Widgets/MountItem.vala:32 src/Widgets/Popover.vala:76
+#: src/Widgets/MountItem.vala:32
+#: src/Widgets/Popover.vala:76
 #: src/Widgets/VolumeItem.vala:34
 msgid "Network"
-msgstr ""
+msgstr "Réseau"
 
-#: src/Widgets/MountItem.vala:36 src/Widgets/VolumeItem.vala:38
+#: src/Widgets/MountItem.vala:36
+#: src/Widgets/VolumeItem.vala:38
 msgid "Other"
-msgstr ""
+msgstr "Autres"
 
 #: src/Widgets/MountItem.vala:59
 msgid "Eject"
-msgstr ""
+msgstr "Ejecter"
 
 #: src/Widgets/MountItem.vala:61
 msgid "Unmount"
-msgstr ""
+msgstr "Démonter"
 
 #: src/Widgets/MountItem.vala:77
 msgid "Error while ejecting device"
-msgstr ""
+msgstr "Erreur lors de l'éjection du dispositif"
 
 #: src/Widgets/MountItem.vala:92
 msgid "Error while unmounting volume"
-msgstr ""
+msgstr "Erreur lors du démontage du volume"
 
 #: src/Widgets/Popover.vala:60
 msgid "Home Folder"
-msgstr ""
+msgstr "Dossier d'accueil"
 
 #. iter = new ListItem (_("Computer"), "computer");
 #. iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("computer:///"));});
 #. std_listbox.add (iter);
 #: src/Widgets/Popover.vala:68
 msgid "Root"
-msgstr ""
+msgstr "Racine"
 
 #: src/Widgets/Popover.vala:80
 msgid "Trash"
-msgstr ""
+msgstr "Poubelle"
 
 #: src/Widgets/VolumeItem.vala:59
 msgid "Error while mounting volume"
-msgstr ""
+msgstr "Erreur lors du montage du volume"
 
 #: src/Widgets/StandardItem.vala:23
 msgid "Places"
-msgstr ""
+msgstr "Lieux"

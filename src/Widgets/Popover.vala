@@ -57,7 +57,7 @@ namespace Places.Widgets {
         }
 
         public void add_std_places () {
-            ListItem iter = new ListItem (_("Home Folder"), "user-home");
+            ListItem iter = new StandardItem (_("Home Folder"), "user-home");
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("file:" + user_home));});
             std_listbox.add (iter);
 
@@ -65,7 +65,7 @@ namespace Places.Widgets {
             // iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("computer:///"));});
             // std_listbox.add (iter);
 
-            iter = new ListItem (_("Root"), "computer");
+            iter = new StandardItem (_("Root"), "computer");
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("file:///"));});
             std_listbox.add (iter);
 
@@ -73,11 +73,11 @@ namespace Places.Widgets {
             // iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("recent:///"));});
             // std_listbox.add (iter);
 
-            iter = new ListItem (_("Network"), "network-workgroup");
+            iter = new StandardItem (_("Network"), "network-workgroup");
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("network:///"));});
             std_listbox.add (iter);
 
-            iter = new ListItem (_("Trash"), "user-trash");
+            iter = new StandardItem (_("Trash"), "user-trash");
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("trash:///"));});
             std_listbox.add (iter);
         }
