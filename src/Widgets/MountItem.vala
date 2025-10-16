@@ -37,7 +37,7 @@ namespace Places.Widgets {
                     break;
             }
 
-            base (mount.get_name (), elem_image, mount.get_symbolic_icon ());
+            base (mount.get_name (), elem_image, mount.get_icon ());
 
             category_name = _category_name;
             this.mount = mount;

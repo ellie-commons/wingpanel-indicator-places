@@ -39,7 +39,7 @@ namespace Places.Widgets {
                     break;
             }
 
-            base (volume.get_name (), elem_image, volume.get_symbolic_icon());
+            base (volume.get_name (), elem_image, volume.get_icon());
 
             category_name = _category_name;
             this.volume = volume;
