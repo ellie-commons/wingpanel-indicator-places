@@ -25,12 +25,16 @@ namespace Places {
 
         public Indicator () {
             Object (code_name : "places-indicator");
-
             Gtk.IconTheme.get_default ().add_resource_path ("/io/elementary/desktop/wingpanel/places");
-
             volume_monitor = GLib.VolumeMonitor.get ();
-
             visible = true;
+        }
+
+        construct {
+            Intl.setlocale (LocaleCategory.ALL, "");
+            Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+            Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+            Intl.textdomain (GETTEXT_PACKAGE);
         }
 
         public override Gtk.Widget get_display_widget () {

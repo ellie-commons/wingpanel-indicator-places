@@ -8,14 +8,29 @@ gnome = import ('gnome')
 i18n = import ('i18n')
 gettext_name = meson.project_name () + '-indicator'
 
+prefix = get_option('prefix')
+libdir = prefix / get_option('libdir')
+
+
 add_global_arguments ('-DGETTEXT_PACKAGE="@0@"'.format (gettext_name), language:'c')
 
 wingpanel_dep = dependency ('wingpanel')
 
 subdir ('data')
 
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', prefix / get_option('localedir'))
+config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name() + '-indicator')
+config_data.set_quoted('DATADIR', prefix / get_option('datadir') / meson.project_name())
+config_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 shared_module (
   meson.project_name (),
+  configure_file(input: 'src/Config.vala.in', output: '@BASENAME@', configuration: config_data),
   'src/Indicator.vala',
   'src/Widgets/BookmarksItem.vala',
   'src/Widgets/ListItem.vala',
