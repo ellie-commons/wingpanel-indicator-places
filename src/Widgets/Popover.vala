@@ -105,6 +105,7 @@ namespace Places.Widgets {
 
                     BookmarksItem iter = new BookmarksItem (label, get_user_icon (path));
                     iter.iter_button.clicked.connect (() => {open_directory (file_from_path (path));});
+                    iter.set_tooltip_text (path);
                     user_listbox.add (iter);
                 }
             } catch (GLib.Error error) {
