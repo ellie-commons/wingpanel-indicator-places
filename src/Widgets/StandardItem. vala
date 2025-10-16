@@ -17,8 +17,8 @@
  */
 
 namespace Places.Widgets {
-    public class StandardItems : ListItem {
-        public StandardItems (string elem_name, string img_path) {
+    public class StandardItem : ListItem {
+        public StandardItem (string elem_name, string img_path) {
             base (elem_name, img_path);
             category_name = _("Places");
         }
