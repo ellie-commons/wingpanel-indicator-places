@@ -1,0 +1,7 @@
+src/Indicator.vala
+src/Widgets/BookmarksItem.vala
+src/Widgets/ListItem.vala
+src/Widgets/MountItem.vala
+src/Widgets/Popover.vala
+src/Widgets/VolumeItem.vala
+src/Widgets/StandardItem.vala
