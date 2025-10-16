@@ -1,7 +1,7 @@
 project(
   'xplaces',
   'vala', 'c',
-  version: '3.0.0'
+  version: '3.0.1'
 )
 
 gnome = import ('gnome')
@@ -22,6 +22,7 @@ shared_module (
   'src/Widgets/MountItem.vala',
   'src/Widgets/Popover.vala',
   'src/Widgets/VolumeItem.vala',
+  'src/Widgets/StandardItem.vala',
   gresource,
   dependencies: [
     dependency ('glib-2.0'),
