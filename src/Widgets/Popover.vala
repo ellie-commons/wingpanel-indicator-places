@@ -29,7 +29,10 @@ namespace Places.Widgets {
 
         public Popover () {
             hexpand = true;
-            margin_top = 15;
+            margin_top = 10;
+            margin_bottom = 10;
+            margin_end = 10;
+            margin_start = 10;
             user_home = GLib.Environment.get_home_dir ();
 
             user_listbox = new Gtk.ListBox ();
@@ -45,7 +48,7 @@ namespace Places.Widgets {
             vol_listbox.set_header_func (list_header_func);
 
             Gtk.Separator v_separator = new Gtk.Separator (Gtk.Orientation.VERTICAL);
-            v_separator.margin_start = v_separator.margin_end = 3;
+            v_separator.margin_start = v_separator.margin_end = 10;
 
             add_std_places ();
             add_user_places ();
@@ -188,6 +191,7 @@ namespace Places.Widgets {
                 label.set_use_markup (true);
                 before.set_header (label);
                 label.margin = 5;
+                label.margin_bottom = 8;
             } else {
                 before.set_header (null);
             }

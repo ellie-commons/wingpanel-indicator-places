@@ -25,12 +25,12 @@ namespace Places.Widgets {
 
         public ListItem (string elem_label, string elem_img, GLib.Icon? elem_icon = null) {
             orientation = Gtk.Orientation.VERTICAL;
-            margin_bottom = 8;
+            margin_bottom = 5;
 
             iter_button = new Gtk.ToolButton (null, null);
-            iter_button.set_can_focus(false);
+            iter_button.set_can_focus (false);
 
-            overlay = new Gtk.Overlay();
+            overlay = new Gtk.Overlay ();
             overlay.add (iter_button);
 
             pack_start (overlay, true, true, 0);
@@ -42,12 +42,12 @@ namespace Places.Widgets {
                 icon = new Gtk.Image ();
                 icon.set_from_icon_name (elem_img, Gtk.IconSize.MENU);
             }
-            icon.margin_start = icon.margin_end = 10;
+            icon.margin_end = 5;
 
             Gtk.Label label = new Gtk.Label (elem_label);
-            label.set_max_width_chars(25);
-            label.set_ellipsize(Pango.EllipsizeMode.END);
-            label.set_halign(Gtk.Align.START);
+            label.set_max_width_chars (25);
+            label.set_ellipsize (Pango.EllipsizeMode.END);
+            label.set_halign (Gtk.Align.START);
 
             inner_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             inner_box.pack_start (icon, false, false, 0);
@@ -56,7 +56,7 @@ namespace Places.Widgets {
             iter_button.set_label_widget (inner_box);
         }
 
-        public string get_item_category() {
+        public string get_item_category () {
             if (category_name != null) {
                 return category_name;
             } else {
