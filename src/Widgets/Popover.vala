@@ -25,7 +25,7 @@ namespace Places.Widgets {
         private Gtk.ListBox std_listbox;
         private Gtk.ListBox vol_listbox;
 
-        public signal void close_poover ();
+        public signal void close_popover ();
 
         public Popover () {
             hexpand = true;
@@ -38,6 +38,7 @@ namespace Places.Widgets {
 
             std_listbox = new Gtk.ListBox();
             std_listbox.set_selection_mode (Gtk.SelectionMode.NONE);
+            std_listbox.set_header_func(list_header_func);
 
             vol_listbox = new Gtk.ListBox();
             vol_listbox.set_selection_mode (Gtk.SelectionMode.NONE);
@@ -60,6 +61,10 @@ namespace Places.Widgets {
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("file:" + user_home));});
             std_listbox.add (iter);
 
+            // iter = new ListItem (_("Computer"), "computer");
+            // iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("computer:///"));});
+            // std_listbox.add (iter);
+
             iter = new ListItem (_("Root"), "computer");
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("file:///"));});
             std_listbox.add (iter);
@@ -72,9 +77,9 @@ namespace Places.Widgets {
             iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("network:///"));});
             std_listbox.add (iter);
 
-            // iter = new ListItem (_("Trash"), "user-trash");
-            // iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("trash:///"));});
-            // std_listbox.add (iter);
+            iter = new ListItem (_("Trash"), "user-trash");
+            iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("trash:///"));});
+            std_listbox.add (iter);
         }
 
         private void add_user_places () {
