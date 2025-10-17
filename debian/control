@@ -1,4 +1,4 @@
-Source: wingpanel-indicator-places
+Source: io.github.ellie-commons.wingpanel-indicator-places
 Section: x11
 Priority: optional
 Maintainer: dirli <litandrej85@gmail.com>
@@ -13,9 +13,9 @@ Standards-Version: 1.0.0
 Homepage: https://github.com/ellie-commons/wingpanel-indicator-places
 Rules-Requires-Root: no
 
-Package: wingpanel-indicator-places
+Package: io.github.ellie-commons.wingpanel-indicator-places
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Enhances: wingpanel
+Enhances: io.elementary.wingpanel
 Description: Wingpanel places indicator for disks, volumes and places management
  Manage disks, volumes, places from the panel
