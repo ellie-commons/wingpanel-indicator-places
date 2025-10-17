@@ -9,3 +9,9 @@ gresource = gnome.compile_resources (
     source_dir: 'data',
     c_name: 'as'
 )
+
+install_data (
+    'places.gschema.xml',
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
+    rename: meson.project_name() + '.gschema.xml'
+)

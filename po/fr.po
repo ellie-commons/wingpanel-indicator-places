@@ -1,4 +1,3 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,7 +7,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-10-16 19:30+0200\n"
+"POT-Creation-Date: 2025-10-17 19:44+0200\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Project-Id-Version: xplaces-indicator\n"
 "Report-Msgid-Bugs-To: \n"
@@ -29,7 +28,7 @@ msgstr "Dispositifs"
 #. iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("recent:///"));});
 #. std_listbox.add (iter);
 #: src/Widgets/MountItem.vala:32
-#: src/Widgets/Popover.vala:76
+#: src/Widgets/Popover.vala:79
 #: src/Widgets/VolumeItem.vala:34
 msgid "Network"
 msgstr "Réseau"
@@ -55,18 +54,18 @@ msgstr "Erreur lors de l'éjection du dispositif"
 msgid "Error while unmounting volume"
 msgstr "Erreur lors du démontage du volume"
 
-#: src/Widgets/Popover.vala:60
+#: src/Widgets/Popover.vala:63
 msgid "Home Folder"
 msgstr "Dossier d'accueil"
 
 #. iter = new ListItem (_("Computer"), "computer");
 #. iter.iter_button.clicked.connect (() => {open_directory (file_from_path ("computer:///"));});
 #. std_listbox.add (iter);
-#: src/Widgets/Popover.vala:68
+#: src/Widgets/Popover.vala:71
 msgid "Root"
 msgstr "Racine"
 
-#: src/Widgets/Popover.vala:80
+#: src/Widgets/Popover.vala:83
 msgid "Trash"
 msgstr "Poubelle"
 

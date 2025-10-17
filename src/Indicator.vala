@@ -18,6 +18,7 @@
 
 namespace Places {
     public class Indicator : Wingpanel.Indicator {
+        private static GLib.Settings settings;
         private GLib.VolumeMonitor volume_monitor;
 
         private Widgets.Popover? main_widget = null;
@@ -25,9 +26,6 @@ namespace Places {
 
         public Indicator () {
             Object (code_name : "places-indicator");
-            Gtk.IconTheme.get_default ().add_resource_path ("/io/elementary/desktop/wingpanel/places");
-            volume_monitor = GLib.VolumeMonitor.get ();
-            visible = true;
         }
 
         construct {
@@ -35,6 +33,12 @@ namespace Places {
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
+
+            Gtk.IconTheme.get_default ().add_resource_path ("/io/elementary/desktop/wingpanel/places");
+            volume_monitor = GLib.VolumeMonitor.get ();
+
+            settings = new GLib.Settings ("io.github.ellie_commons.indicator-places");
+            settings.bind ("visible", this, "visible", GLib.SettingsBindFlags.DEFAULT);
         }
 
         public override Gtk.Widget get_display_widget () {
